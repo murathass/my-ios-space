@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BiotekSupportManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BioTek Teknoloji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbF-1y-UH9">
+                                <rect key="frame" x="0.0" y="28" width="320" height="24"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hizmet Yönetimi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOQ-wF-Ey6">
+                                <rect key="frame" x="0.0" y="70" width="320" height="20"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="cmF-x6-GgT">
+                                <rect key="frame" x="0.0" y="135" width="320" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="fFP-wN-CRA"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="durkaya.kemal@gmail.com" borderStyle="roundedRect" placeholder="E-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tbz-iY-uoF">
+                                <rect key="frame" x="16" y="295" width="288" height="30"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Kemal@34" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7CG-HO-HwY">
+                                <rect key="frame" x="16" y="349" width="288" height="30"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohB-db-4gO">
+                                <rect key="frame" x="16" y="413" width="288" height="30"/>
+                                <state key="normal" title="GİRİŞ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0XQ-fp-yZs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BİOTEK CBS © 2017 BİOTEK HAŞERE KONTROL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byq-OU-1Ym">
+                                <rect key="frame" x="16" y="533" width="288" height="14.5"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WOQ-wF-Ey6" firstAttribute="top" secondItem="mbF-1y-UH9" secondAttribute="bottom" constant="18" id="0Hl-Yg-NkL"/>
+                            <constraint firstAttribute="trailing" secondItem="7CG-HO-HwY" secondAttribute="trailing" constant="16" id="7eG-19-sRW"/>
+                            <constraint firstItem="Tbz-iY-uoF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7in-LM-Bcq"/>
+                            <constraint firstItem="7CG-HO-HwY" firstAttribute="top" secondItem="Tbz-iY-uoF" secondAttribute="bottom" constant="24" id="7p6-pa-neH"/>
+                            <constraint firstItem="cmF-x6-GgT" firstAttribute="top" secondItem="WOQ-wF-Ey6" secondAttribute="bottom" constant="45" id="E5e-vX-wvP"/>
+                            <constraint firstItem="mbF-1y-UH9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EhL-Cw-tGq"/>
+                            <constraint firstItem="ohB-db-4gO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Eiw-OV-Ahw"/>
+                            <constraint firstItem="WOQ-wF-Ey6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EqF-3K-NOC"/>
+                            <constraint firstItem="ohB-db-4gO" firstAttribute="top" secondItem="7CG-HO-HwY" secondAttribute="bottom" constant="34" id="Hm7-Dj-49h"/>
+                            <constraint firstAttribute="trailing" secondItem="WOQ-wF-Ey6" secondAttribute="trailing" id="LVm-Bq-5bi"/>
+                            <constraint firstAttribute="trailing" secondItem="ohB-db-4gO" secondAttribute="trailing" constant="16" id="Nfl-cU-RKs"/>
+                            <constraint firstItem="Byq-OU-1Ym" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Pf7-e4-Kdc"/>
+                            <constraint firstItem="Byq-OU-1Ym" firstAttribute="top" secondItem="ohB-db-4gO" secondAttribute="bottom" constant="90" id="PfA-s3-NFV"/>
+                            <constraint firstAttribute="trailing" secondItem="cmF-x6-GgT" secondAttribute="trailing" id="Ujp-aC-iGy"/>
+                            <constraint firstItem="Tbz-iY-uoF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="UqZ-Tp-tgf"/>
+                            <constraint firstItem="cmF-x6-GgT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ws5-l0-rac"/>
+                            <constraint firstItem="7CG-HO-HwY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="bWf-03-D1j"/>
+                            <constraint firstItem="mbF-1y-UH9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="bb2-XB-4hm"/>
+                            <constraint firstAttribute="trailing" secondItem="mbF-1y-UH9" secondAttribute="trailing" id="pAW-NJ-fnG"/>
+                            <constraint firstItem="Tbz-iY-uoF" firstAttribute="top" secondItem="cmF-x6-GgT" secondAttribute="bottom" constant="60" id="rTb-7D-yJk"/>
+                            <constraint firstAttribute="trailing" secondItem="Byq-OU-1Ym" secondAttribute="trailing" constant="16" id="uFQ-Ip-7gX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTV" destination="Tbz-iY-uoF" id="hsv-oz-V75"/>
+                        <outlet property="passwordTV" destination="7CG-HO-HwY" id="VTv-au-eKW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="8gs-PP-zXb">
+            <objects>
+                <viewController storyboardIdentifier="HomePage" id="KII-Zj-tW3" customClass="HomeViewController" customModule="BiotekSupportManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hxp-Z8-UtO"/>
+                        <viewControllerLayoutGuide type="bottom" id="zXG-Yd-isg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u1P-44-Cmk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ana Sayfa" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8s-DT-5lP">
+                                <rect key="frame" x="16" y="259" width="288" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1yy-RC-s5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012.5" y="137.32394366197184"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="loginLogo" width="1476" height="1455"/>
+    </resources>
+</document>

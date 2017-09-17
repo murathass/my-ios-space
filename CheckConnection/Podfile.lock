@@ -1,0 +1,22 @@
+PODS:
+  - EFInternetIndicator (0.2.0):
+    - EFInternetIndicator/Interface (= 0.2.0)
+    - EFInternetIndicator/Network (= 0.2.0)
+  - EFInternetIndicator/Interface (0.2.0):
+    - SwiftMessages
+  - EFInternetIndicator/Network (0.2.0):
+    - ReachabilitySwift
+  - ReachabilitySwift (3)
+  - SwiftMessages (3.4.0)
+
+DEPENDENCIES:
+  - EFInternetIndicator
+
+SPEC CHECKSUMS:
+  EFInternetIndicator: 76219397add7b5f2388869fa4d9305d0c6af51e1
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  SwiftMessages: e20aa1557fde1525ea369361bec4943cc0d08e7c
+
+PODFILE CHECKSUM: 08ea8cc8d1a4ec703b3ec375653ef282aa5ebf20
+
+COCOAPODS: 1.2.1

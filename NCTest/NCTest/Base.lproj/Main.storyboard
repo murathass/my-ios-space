@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NCTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxj-Wt-Btu">
+                                <rect key="frame" x="16" y="318" width="337" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="GO"/>
+                                <connections>
+                                    <action selector="btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3DG-Pb-ZIB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
+        </scene>
+        <!--Ana Sayfa-->
+        <scene sceneID="3pU-8m-Har">
+            <objects>
+                <viewController id="YS9-04-PTS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UBR-M7-nsh"/>
+                        <viewControllerLayoutGuide type="bottom" id="T9f-Kj-kpF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yy7-oK-n5V">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ana Sayfa" id="BfY-Rc-hGP">
+                        <barButtonItem key="rightBarButtonItem" title="İleri" id="evt-od-Plm">
+                            <connections>
+                                <segue destination="L6d-et-mIm" kind="show" id="b3U-6v-4lW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0yZ-4N-TyA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1700" y="138.98050974512745"/>
+        </scene>
+        <!--Ara Sayfa-->
+        <scene sceneID="n01-vJ-GwP">
+            <objects>
+                <viewController id="L6d-et-mIm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o2h-MY-VK4"/>
+                        <viewControllerLayoutGuide type="bottom" id="uzf-2r-8gT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QdE-28-CcO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ara Sayfa" id="t9R-lY-Qfr">
+                        <barButtonItem key="rightBarButtonItem" title="İleri" id="esh-Dv-NHg">
+                            <connections>
+                                <segue destination="IbR-7r-xWu" kind="show" id="i0t-xW-wIA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cku-If-3hH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2550" y="139"/>
+        </scene>
+        <!--Son Sayfa-->
+        <scene sceneID="s2a-Qc-3vA">
+            <objects>
+                <viewController id="IbR-7r-xWu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3IJ-OG-n4j"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cdw-zd-VjF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uZ3-jZ-db4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Son Sayfa" id="bKy-xx-GnG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oN8-FJ-Gsk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3401" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="m25-cY-7in">
+            <objects>
+                <navigationController storyboardIdentifier="HomePageNC" automaticallyAdjustsScrollViewInsets="NO" id="RzY-wg-TCE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nP4-4R-QLn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YS9-04-PTS" kind="relationship" relationship="rootViewController" id="uU7-VU-5pm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NoU-TJ-Vbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760.79999999999995" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
