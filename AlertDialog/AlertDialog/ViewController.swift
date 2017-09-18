@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     
     }
 
-
     @IBAction func singUpClciked(_ sender: Any) {
         
         if nameTF.text == "" {
