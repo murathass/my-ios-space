@@ -18,20 +18,32 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var arrYear = [Int]()
     var arrArtist = [String]()
     
+    var isAscending = true
+    var selectedName = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
         
+        self.selectedName = ""
+        
+        
         getData()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.getData), name: NSNotification.Name(rawValue: "PaintingReflesh"), object: nil)
+    }
+    
     
     func getData(){
         
         arrNames.removeAll(keepingCapacity: false)
         arrImage.removeAll(keepingCapacity: false)
         arrYear.removeAll(keepingCapacity: false)
+        
         arrArtist.removeAll(keepingCapacity: false)
     
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -85,8 +97,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedName = self.arrNames[indexPath.row]
+        performSegue(withIdentifier: "toDetailsVC", sender: nil)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailsVC" {
+            let detailsVC = segue.destination as! DetailsViewController
+            detailsVC.selectName = selectedName
+        }
+    }
+    
+    @IBAction func addButtonClicked(_ sender: Any) {
+        self.selectedName = ""
+        performSegue(withIdentifier: "toDetailsVC", sender: nil)
+    }
+
+
 }
 

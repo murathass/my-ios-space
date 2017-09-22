@@ -16,12 +16,58 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var artistName: UITextField!
     @IBOutlet weak var paintingYear: UITextField!
     
+    var selectName = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imageView.isUserInteractionEnabled = true
         let gesture = UITapGestureRecognizer(target: self, action: #selector(DetailsViewController.selectImage))
         imageView.addGestureRecognizer(gesture)
+        
+        
+        if self.selectName != "" {
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult> (entityName: "Painting")
+            fetchRequest.predicate = NSPredicate(format: "name = %@", selectName)
+            fetchRequest.returnsObjectsAsFaults = false
+            
+            do{
+                let results = try context.fetch(fetchRequest)
+                
+                if results.count > 0 {
+                    for result in results as! [NSManagedObject]{
+                        if let name = result.value(forKey: "name") as? String{
+                            self.paintingName.text = name
+                        }
+                        
+                        if let image = result.value(forKey: "image") as? Data{
+                            self.imageView.image = UIImage(data: image)
+                        }
+                        
+                        if let artist = result.value(forKey: "artist") as? String{
+                            self.artistName.text = artist
+                        }
+                        
+                        if let year = result.value(forKey: "year") as? Int{
+                            self.paintingYear.text = String(year)
+                        }
+                    }
+                }
+                
+            }catch{
+                print("error")
+            }
+            
+        }else{
+            imageView.image = nil
+            paintingYear.text = ""
+            paintingName.text = ""
+            artistName.text = ""
+        }
     
     }
     
@@ -66,6 +112,9 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
             print("error")
         }
         
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PaintingReflesh"), object: nil)
+        self.navigationController?.popViewController(animated: true)
                 
     }
     
