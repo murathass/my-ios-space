@@ -32,6 +32,10 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MapVC.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
+        
         
         if selectedTitle != "" {
             placeNameTF.text = selectedTitle
@@ -52,7 +56,7 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         self.locationManager.startUpdatingLocation()
         
         let gesture = UILongPressGestureRecognizer(target: self, action: #selector(MapVC.choosePoint(gestureRecognizer:)))
-        gesture.minimumPressDuration = 3
+        gesture.minimumPressDuration = 1.5
         self.mapView.addGestureRecognizer(gesture)
         
     }
@@ -165,9 +169,12 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         }catch{
             print("error")
         }
-        
-        
-        
     }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
 }
 
