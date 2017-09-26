@@ -32,6 +32,9 @@ class SignIUVC: UIViewController {
                 
             }else{
                 
+                UserDefaults.standard.set(user?.email, forKey: "email")
+                UserDefaults.standard.synchronize()
+                
                 self.performSegue(withIdentifier: "toTabBar", sender: nil)
                 
             }
@@ -50,9 +53,14 @@ class SignIUVC: UIViewController {
                 self.present(alert, animated: true, completion: nil)
                 
             }else{
+                UserDefaults.standard.set(user?.email, forKey: "email")
+                UserDefaults.standard.synchronize()
+                
+                /*let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.rememberLogin()*/
+                
                 
                 self.performSegue(withIdentifier: "toTabBar", sender: nil)
-                
             }
             
         })

@@ -16,6 +16,7 @@
 		65A8966A1F792DE5009325DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A896681F792DE5009325DC /* LaunchScreen.storyboard */; };
 		65A896721F793031009325DC /* SignIUVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A896711F793031009325DC /* SignIUVC.swift */; };
 		65A896741F7944CB009325DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65A896731F7944CB009325DC /* GoogleService-Info.plist */; };
+		65A896761F7A8AA6009325DC /* FeedCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A896751F7A8AA6009325DC /* FeedCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		65A8966B1F792DE5009325DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65A896711F793031009325DC /* SignIUVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignIUVC.swift; path = ../SignIUVC.swift; sourceTree = "<group>"; };
 		65A896731F7944CB009325DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		65A896751F7A8AA6009325DC /* FeedCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				65A8965D1F792DE4009325DC /* AppDelegate.swift */,
 				65A896711F793031009325DC /* SignIUVC.swift */,
 				65A8965F1F792DE4009325DC /* FeedVC.swift */,
+				65A896751F7A8AA6009325DC /* FeedCellTableViewCell.swift */,
 				65A896611F792DE4009325DC /* UploadVC.swift */,
 				65A896631F792DE5009325DC /* Main.storyboard */,
 				65A896661F792DE5009325DC /* Assets.xcassets */,
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65A896761F7A8AA6009325DC /* FeedCellTableViewCell.swift in Sources */,
 				65A896621F792DE4009325DC /* UploadVC.swift in Sources */,
 				65A896721F793031009325DC /* SignIUVC.swift in Sources */,
 				65A8965E1F792DE4009325DC /* AppDelegate.swift in Sources */,
@@ -393,6 +397,7 @@
 				65A896701F792DE5009325DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
