@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="intelligent_Image" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5qq-R5-qg2">
+                                <rect key="frame" x="38" y="49" width="299" height="246"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THk-iM-EII">
+                                <rect key="frame" x="38" y="424" width="299" height="30"/>
+                                <state key="normal" title="Select Image"/>
+                                <connections>
+                                    <action selector="changeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zoc-rc-deI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOQ-0L-05Y">
+                                <rect key="frame" x="38" y="323" width="299" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="KPd-23-wnk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="THk-iM-EII" firstAttribute="top" secondItem="kOQ-0L-05Y" secondAttribute="bottom" constant="65" id="EDf-Ci-nVM"/>
+                            <constraint firstItem="5qq-R5-qg2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VxD-Ya-FLt"/>
+                            <constraint firstItem="5qq-R5-qg2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="W9d-dc-Kaa"/>
+                            <constraint firstItem="kOQ-0L-05Y" firstAttribute="leading" secondItem="THk-iM-EII" secondAttribute="leading" id="gHJ-4U-7uA"/>
+                            <constraint firstItem="5qq-R5-qg2" firstAttribute="trailing" secondItem="kOQ-0L-05Y" secondAttribute="trailing" id="htr-wN-Vey"/>
+                            <constraint firstItem="kOQ-0L-05Y" firstAttribute="top" secondItem="5qq-R5-qg2" secondAttribute="bottom" constant="28" id="qcM-UI-TpK"/>
+                            <constraint firstItem="kOQ-0L-05Y" firstAttribute="trailing" secondItem="THk-iM-EII" secondAttribute="trailing" id="uAx-JT-JLT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="THk-iM-EII" secondAttribute="bottom" constant="213" id="ytx-im-y5R"/>
+                            <constraint firstItem="5qq-R5-qg2" firstAttribute="leading" secondItem="kOQ-0L-05Y" secondAttribute="leading" id="z56-tb-1DY"/>
+                            <constraint firstItem="5qq-R5-qg2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="22" id="z8k-31-SRt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="5qq-R5-qg2" id="J3O-a0-dIA"/>
+                        <outlet property="resultLabel" destination="kOQ-0L-05Y" id="qxQ-G0-ltC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.5" y="133.5"/>
+        </scene>
+    </scenes>
+</document>
